@@ -278,23 +278,7 @@ Der Gasgeräte Notdienst Wien bietet rund um die Uhr Wartung, Reparatur und Bera
     }
 
     // JavaScript für Preloader und Logo-Animation beim Neuladen der Seite
-    window.addEventListener('load', function () {
-        // Verzögere die Logo-Animation um 1 Sekunde
-        setTimeout(() => {
-            preloaderLogo.style.width = '0%'; // Setze die Breite auf 0%
-            preloaderLogo.style.transition = 'all 1s ease'; // Füge eine animierte Übergangseigenschaft hinzu
-
-            // Setze die Navbar-Logo-Breite auf 130px
-            navbarLogo.style.width = '130px';
-            navbarLogo.style.transition = 'all 1s ease';
-        }, 1000);
-
-        // Verzögere die Typing-Animation um 2 Sekunden, um nach der Logo-Animation zu starten
-        setTimeout(() => {
-            document.querySelector('.preloader').style.display = 'none';
-            type(); // Starte die Typing-Animation
-        }, 2000);
-    });
+    
 
     // JavaScript für Einblendungsanimation der Cards
     document.addEventListener('DOMContentLoaded', function () {
