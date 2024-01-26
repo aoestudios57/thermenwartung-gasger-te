@@ -25,23 +25,6 @@
             padding: 0;
             overflow-x: hidden;
         }
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #3498db;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-        .preloader img { 
-            width: 130px;
-            height: auto;
-            transition: all 1s ease;
-        }
         .navbar {
             background-color: #3498db;
         }
@@ -87,28 +70,6 @@
             opacity: 0;
             animation: fadeIn 1s forwards;
         }
-        .speech-bubble {
-            position: fixed;
-            right: 20px;
-            bottom: 50px;
-            width: 100px;
-            height: 100px;
-            background-color: #fff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: bounceUpDown 2s infinite alternate; /* Animationsdefinition */
-        }
-
-        @keyframes bounceUpDown {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(20px);
-            }
-        }
 
         @keyframes fadeIn {
             from {
@@ -128,42 +89,9 @@
             font-size: 18px;
             border-right: 2px solid #fff;
         }
-        .speech-bubble {
-    position: fixed;
-    right: 20px;
-    bottom: 50px;
-    width: 120px;
-    height: 120px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren */
-    animation: bounceUpDown 2s infinite alternate;
-}
-
-.speech-bubble a {
-    color: #3498db;
-    text-align: center; /* Zentriere den Text horizontal */
-    margin: 0; /* Entferne den Standardmargin des Absatzes */
-}
- /* Ändere die Textfarbe im Kreis auf Blau (#3498db) */
-
-.square {
-    border-radius: 0; /* Setze die Eckenradius auf 0 für ein Viereck */
-    width: 140px; /* Setze die Breite des Vierecks */
-    height: 90px;
-    background-color: orange;
-     /* Setze die Höhe des Vierecks */
-}
     </style>
 </head>
 <body>
-
-<!-- Preloader -->
-<div class="preloader">
-    <img src="logo.jpeg" alt="Firmenlogo" id="preloader-logo">
-</div>
 
 <!-- Neue Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -204,7 +132,8 @@
         </div>
         <div class="col-md-3 mb-3 mx-3 prices" style="opacity: 1;">
             <div class="card">
-                <img src="bild1.jpg" class="card-img-top" alt="Service 1 Bild">
+                <img src="bild1.jpg" class="card-img-top" alt="Service 1 
+                 Bild">
                 <div class="card-body">
                     <h5 class="card-title">Notdienst 24/7h</h5>
                     <p class="card-text">
@@ -244,7 +173,6 @@ Der Gasgeräte Notdienst Wien bietet rund um die Uhr Wartung, Reparatur und Bera
                    <h2>Hochwertige Marken für Effizienz und Zuverlässigkeit in unseren Dienstleistungen</h2>
                     <p>
                         Wir verwenden eine breite Palette von hochwertigen Geräten für unsere Dienstleistungen. Zu den von uns genutzten Marken gehören VAILLANT, JUNKERS, WOLF, BAXI, SAUNIER DUVAL, BERETTA, GEBE RAPIDO, SIEGER, NORDGAS, BUDERUS, LÖBLICH, OCEAN und VIESSMANN. Diese renommierten Marken gewährleisten eine zuverlässige und effiziente Leistung bei der Erfüllung unserer Serviceanforderungen.</p>
-                   
                     <!-- Weitere Preise können hier hinzugefügt werden -->
                 </div>
             </div>
@@ -266,7 +194,6 @@ Der Gasgeräte Notdienst Wien bietet rund um die Uhr Wartung, Reparatur und Bera
 
     let index = 0;
     const typingContainer = document.getElementById('typing-text');
-    const preloaderLogo = document.getElementById('preloader-logo');
     const navbarLogo = document.getElementById('navbar-logo');
 
     function type() {
@@ -277,10 +204,6 @@ Der Gasgeräte Notdienst Wien bietet rund um die Uhr Wartung, Reparatur und Bera
         }
     }
 
-    // JavaScript für Preloader und Logo-Animation beim Neuladen der Seite
-    
-
-    // JavaScript für Einblendungsanimation der Cards
     document.addEventListener('DOMContentLoaded', function () {
         const cards = document.querySelectorAll('.card');
 
@@ -290,14 +213,12 @@ Der Gasgeräte Notdienst Wien bietet rund um die Uhr Wartung, Reparatur und Bera
             }, 300 * (index + 1)); // Einblendungsverzögerung basierend auf der Card-Reihenfolge
         });
 
-        // Einblendungsanimation für den "Über Uns" Abschnitt
         const aboutUsSection = document.querySelector('.about-us');
         setTimeout(() => {
             aboutUsSection.style.opacity = '1';
             type(); // Starte die Typing-Animation für den "Über Uns" Text
         }, 500); // Einblendungsverzögerung für den "Über Uns" Abschnitt
 
-        // Einblendungsanimation für den "Preise" Abschnitt
         const pricesSection = document.querySelector('.prices');
         setTimeout(() => {
             pricesSection.style.opacity = '1';
@@ -309,3 +230,7 @@ Der Gasgeräte Notdienst Wien bietet rund um die Uhr Wartung, Reparatur und Bera
 </footer>
 </body>
 </html>
+```
+
+Ich habe den `<div class="preloader">...</div>` Abschnitt entfernt. Damit wird der Preloader nicht mehr auf der Seite angezeigt.
+                
