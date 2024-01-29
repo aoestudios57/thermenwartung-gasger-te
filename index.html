@@ -117,6 +117,20 @@
     align-items: center; /* Vertikal zentrieren */
     animation: bounceUpDown 2s infinite alternate;
 }
+@media (max-width: 768px) {
+    .prices {
+        height: 90%;
+
+    }
+
+    .prices .card {
+        width: 250px;
+        margin-right: 20%; /* Ändere die Breite auf 100% */
+        margin: 0 auto; /* Zentriere die Karte horizontal */
+    }
+}
+
+
 
     </style>
 </head>
@@ -148,40 +162,39 @@
 </nav>
 
 <!-- Service Cards -->
-<div class="container mt-4 p-5 p-md-0">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-3 mb-3 mx-3 prices" style="opacity: 1;">
-            <div class="card">
-                <img src="bild2.jpg" class="card-img-top" alt="Service 1 Bild">
-                <div class="card-body">
-                    <h5 class="card-title">Reinigung</h5>
-                    <p class="card-text">Die Reinigung beinhaltet: Innenkörper/Kesselblock, Hauptbrenner, Zündbrenner (Ausbau und Reinigung), Sicherheitseinrichtungen, Verkabelung, Ausdehnungsgefäß, ggf. Regelungsprüfung, Gasmenge einstellen, Dichtheitsprüfung gasführender Bauteile, Abgasanlagenprüfung, allgemeine Funktionsprüfung, Warmwassertemperatur einstellen.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-3 mx-3 prices" style="opacity: 1;">
-            <div class="card">
-                <img src="bild1.jpg" class="card-img-top" alt="Service 1 
-                 Bild">
-                <div class="card-body">
-                    <h5 class="card-title">Notdienst 24/7h</h5>
-                    <p class="card-text">
-                        
-Der Gasgeräte Notdienst Wien bietet rund um die Uhr Wartung, Reparatur und Beratung für Gasthermen. Unsere 24-Stunden-Hotline garantiert schnelle Hilfe und Dienstleistungen wie Thermentausch. Wir bieten persönliche Beratung und kostenlose Kostenvoranschläge für den Thermentausch in Wien und Umgebung. Vertrauen Sie auf unsere schnelle Reaktionszeit.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-3 mx-3 prices" style="opacity: 1;">
-            <div class="card">
-                <img src="bild3.jpg" class="card-img-top" alt="Service 1 Bild">
-                <div class="card-body">
-                    <h5 class="card-title">Thermentausch</h5>
-                    <p class="card-text">Thermentausch und Neuinstallation von Gasthermen sind unsere Spezialgebiete. Therminus Installationen bietet persönliche Beratung, kostenlose Kostenvoranschläge für Thermentausch in Wien und Umgebung. Wir sind Ihr Gasgeräte Kundendienst für Durchlauferhitzer, Gaskonvektor, Thermenservice, Thermenreparatur und Gasgeräte in Wien.Nur 2300€ inkl mwst</p>
-                </div>
-            </div>
+<!-- Erste Karte: Reinigung -->
+<div class="col-md-6 col-lg-4 mb-3">
+    <div class="card">
+        <img src="twartung.jpeg" class="card-img-top" alt="Service 1 Bild">
+        <div class="card-body">
+            <h5 class="card-title">Thermenwartung ab 99</h5>
+            <p class="card-text">Die Thermenwartung ab 99 beinhaltet: Innenkörper/Kesselblock, Hauptbrenner, Zündbrenner (Ausbau und Reinigung), Sicherheitseinrichtungen, Verkabelung, Ausdehnungsgefäß, ggf. Regelungsprüfung, Gasmenge einstellen, Dichtheitsprüfung gasführender Bauteile, Abgasanlagenprüfung, allgemeine Funktionsprüfung, Warmwassertemperatur einstellen.</p>
         </div>
     </div>
 </div>
+
+<!-- Zweite Karte: Notdienst 24/7h -->
+<div class="col-md-6 col-lg-4 mb-3">
+    <div class="card">
+        <img src="notdienst.jpeg" class="card-img-top" alt="Service 2 Bild">
+        <div class="card-body">
+            <h5 class="card-title">Notdienst 24/7h</h5>
+            <p class="card-text">Der Gasgeräte Notdienst Wien bietet rund um die Uhr Wartung, Reparatur und Beratung für Gasthermen. Unsere 24-Stunden-Hotline garantiert schnelle Hilfe und Dienstleistungen wie Thermentausch. Wir bieten persönliche Beratung und kostenlose Kostenvoranschläge für den Thermentausch in Wien und Umgebung. Vertrauen Sie auf unsere schnelle Reaktionszeit.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Dritte Karte: Thermentausch -->
+<div class="col-md-6 col-lg-4 mb-3">
+    <div class="card">
+        <img src="thermentausch.jpeg" class="card-img-top" alt="Service 3 Bild">
+        <div class="card-body">
+            <h5 class="card-title">Thermentausch</h5>
+            <p class="card-text">Thermentausch und Neuinstallation von Gasthermen sind unsere Spezialgebiete. Therminus Installationen bietet persönliche Beratung, kostenlose Kostenvoranschläge für Thermentausch in Wien und Umgebung. Wir sind Ihr Gasgeräte Kundendienst für Durchlauferhitzer, Gaskonvektor, Thermenservice, Thermenreparatur und Gasgeräte in Wien.Nur 2300€ inkl mwst</p>
+        </div>
+    </div>
+</div>
+
 
 <!-- Über Uns Abschnitt -->
 <div class="container mt-4 my-5 ">
@@ -211,7 +224,9 @@ Der Gasgeräte Notdienst Wien bietet rund um die Uhr Wartung, Reparatur und Bera
 
 <!-- Runder Kreis mit Text -->
 <div class="speech-bubble square text-container">
-    <a href="tel:+43 664 8630965" class="white-text">+43 664 8630965<br/>Service ab 99 €</a>
+    <a href="tel:+43 664 8630965" class="white-text"><i class="bi bi-telephone-fill"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+      </svg></i></a>
 </div>
 
 <!-- Bootstrap JS und jQuery -->
